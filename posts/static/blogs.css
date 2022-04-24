@@ -1,5 +1,5 @@
 html {
-    background-color: rgb(18, 72, 94);
+    background-color: rgb(31, 47, 192);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -10,7 +10,7 @@ footer {
     grid-template-columns: auto 1fr;
     column-gap: 24px;
     align-items: center;
-    background-color: rgb(44, 40, 65);
+    background-color: rgb(173, 164, 216);
     padding: 24px;
 }
 
@@ -34,7 +34,7 @@ header {
 }
 
 .main-post {
-    background-color: rgb(37, 221, 197);
+    background-color: rgb(126, 190, 182);
     border: 1px solid rgb(2, 33, 61);
     padding: 24px;
     display: grid;
@@ -48,6 +48,8 @@ main {
 
 .post-content {
     font-size: 125%;
+    display: grid;
+    grid-template-columns: auto 1fr;
 }
 
 .post-title {
