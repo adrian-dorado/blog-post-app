@@ -1,0 +1,83 @@
+html {
+    background-color: rgb(18, 72, 94);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+footer {
+    padding: 24px;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 24px;
+    align-items: center;
+    background-color: rgb(44, 40, 65);
+    padding: 24px;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    padding: 24px;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 24px;
+}
+
+.blog-cover {
+    width: 200px;
+    height: auto;
+    grid-row: 1 / span 5;
+    padding: 24px;
+}
+
+.main-post {
+    background-color: rgb(37, 221, 197);
+    border: 1px solid rgb(2, 33, 61);
+    padding: 24px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+main {
+    max-width: 800px;
+    margin: auto;
+}
+
+.post-content {
+    font-size: 125%;
+}
+
+.post-title {
+    color: green;
+}
+
+.detail-page-book-selector {
+    background-color: white;
+    padding: 24px;
+}
+
+.book-review-form {
+    background-color: white;
+    padding: 24px;
+}
+
+button {
+    padding: 12px;
+    font-size: 110%;
+}
+
+input {
+    border: 1px solid darkgrey;
+    border-radius: 4px;
+    padding: 12px;
+}
+
+textarea {
+    border: 1px solid darkgrey;
+    border-radius: 4px;
+    padding: 12px;
+    height: 100px;
+}

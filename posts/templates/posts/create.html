@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog Posts - Create!</title>
+    <link rel="stylesheet" href="{% static "book-review.css" %}">
+</head>
+<body>
+    <header>Blog Posts
+        <nav>
+            <a href="{% url "posts_list" %}">Back to Main</a>
+        </nav>
+    </header>
+    <main>
+        <div class="posts-form">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div>
+                    <button>Submit</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div>
+            Copyright 2022 by Adrian Dorado
+        </div>
+        <p> This is my site that contains all of my book Reviews
+            that you can read and see if you'd like that book
+        </p>
+    </footer>
+</body>
+</html>
