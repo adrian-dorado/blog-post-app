@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Details of blog</title>
+    <link rel="stylesheet" href="{% static "blogs.css" %}">
+</head>
+
+<body>
+    <header>My Book Reviews
+        <nav>
+            <a href="{% url "posts_list" %}">Back to Main</a>
+        </nav>
+    </header>
+    <main>
+        <div class="detail-page-post">
+            <img class="blog-cover" src="{{ posts.image }}">
+            <div class="post-title">{{ post.title }}</div>
+            <div class="book-content">{{ post.content }}</div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            Copyright 2022 by Adrian Dorado
+        </div>
+        <p> This is where you can read random musings of mine
+        </p>
+    </footer>
+</body>
+
+</html>

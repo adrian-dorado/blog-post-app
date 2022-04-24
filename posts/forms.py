@@ -4,4 +4,4 @@ from posts.models import Post
 class PostForm(ModelForm):
     class Meta:
         model = Post
-        fields = "__all__python"
+        fields = "__all__"

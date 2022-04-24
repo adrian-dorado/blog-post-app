@@ -1,38 +1,33 @@
 {% load static %}
 <!doctype html>
 <html>
-
-<head>
-    <title>Blogs</title>
-    <link rel="stylesheet" href="{% static "blogs.css" %}">
-</head>
-
-<body>
-    <header>Blogs
-        <nav>
-            <a href="create.html">Create a post!</a>
-        </nav>
-    </header>
-    <main>
-    {% for post in posts %}
-        <div class="main-post">
-            <img class="blog-cover" src="{{ post.title }}">
-            <h2 class="post-title">
-                <a href="detail.html">{{ post.title }}</a>
-            </h2>
-            <div class="post-content">{{ post.content }}
-            </div>
-        </div>
-    {% endfor %}
-    </main>
-    <footer>
-        <div>
-            Copyright 2022 by Adrian Dorado
-        </div>
-        <p> This is my site that contains all of my book Reviews
-            that you can read and see if you'd like that book
-        </p>
-    </footer>
-</body>
-
+    <head>
+        <title>Blogs</title>
+        <link rel="stylesheet" href="{% static "blogs.css" %}">
+    </head>
+    <body>
+        <header>
+            Blogs
+            <nav>
+                <a href="{% url "create_post" %}">Create a post!</a>
+            </nav>
+        </header>
+        <main>
+            {% for post in posts %}
+                <div class="main-post">
+                    <img class="blog-cover" src="{{ post.image }}">
+                    <h2 class="post-title">
+                        <a href="{% url "posts_detail" post.id %}">{{ post.title }}</a>
+                    </h2>
+                    <div class="post-content">{{ post.content }}</div>
+                </div>
+            {% endfor %}
+        </main>
+        <footer>
+            <div>Copyright 2022 by Adrian Dorado</div>
+            <p>
+                This is my site that contains random musings and stuff like that.
+            </p>
+        </footer>
+    </body>
 </html>
